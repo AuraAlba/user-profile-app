@@ -5,7 +5,7 @@ const NavItem = props => {
 
     return (
         <li className="nav-item">
-            <a href={props.path} className={"nav-link " + props.disabled}>{props.name}</a>
+            <a href={props.path} className={"nav-link " + isDisabled}>{props.name}</a>
         </li>
     );
 };
