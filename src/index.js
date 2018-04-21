@@ -4,8 +4,8 @@ import {BrowserRouter} from 'react-router-dom';
 import './index.scss';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/bootstrap-toggle/css/bootstrap2-toggle.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css?raw';
+import '../node_modules/bootstrap-toggle/css/bootstrap2-toggle.css?raw';
 
 ReactDOM.render(
     <BrowserRouter>

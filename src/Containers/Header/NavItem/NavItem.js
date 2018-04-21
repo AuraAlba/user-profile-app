@@ -1,11 +1,17 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 const NavItem = props => {
     const isDisabled = props.disabled ? "disabled" : null;
 
     return (
         <li className="nav-item">
-            <a href={props.path} className={"nav-link " + isDisabled}>{props.name}</a>
+            <NavLink
+                className={"nav-link " + isDisabled}
+                to={props.path}
+            >
+                {props.name}
+            </NavLink>
         </li>
     );
 };
