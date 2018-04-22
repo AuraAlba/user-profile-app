@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import NavItem from './NavItem/NavItem';
+import logo from './../../logo.png';
+import classes from './Header.scss';
 
 class Header extends Component {
     state = {
@@ -17,7 +19,7 @@ class Header extends Component {
 
         return (
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="/">Navbar</a>
+                <a className="navbar-brand" href="/"><img src={logo} className={classes.SizeI} alt="Logo" /></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

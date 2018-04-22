@@ -1,10 +1,11 @@
 import React from "react";
+import classes from "./DisplayField.scss";
 
 const DisplayField = (props) =>{
     return(
-        <div className="form-group row">
-            <label className="col-sm-2 col-form-label">{props.label}</label>
-            <div className="col-sm-10">
+        <div className={"form-group row " + classes.DisplayS}>
+            <label className={"col-sm-5 col-form-label " + classes.LabelS }>{props.label}</label>
+            <div className="col-sm-7">
                 <span>{props.children}</span>
             </div>
 

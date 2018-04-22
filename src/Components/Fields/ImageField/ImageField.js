@@ -3,7 +3,7 @@ import classes from "./ImageField.scss";
 
 const ImageField = (props) =>{
     return(
-        <div>
+        <div className={classes.ImageProfile}>
             <img src={props.src} className={classes.ResponsiveImg} alt={props.alt}/>
         </div>
     )

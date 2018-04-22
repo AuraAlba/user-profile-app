@@ -1,13 +1,14 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import classes from './NavItem.scss';
 
 const NavItem = props => {
     const isDisabled = props.disabled ? "disabled" : null;
 
     return (
-        <li className="nav-item">
+        <li className={classes.NavItem}>
             <NavLink
-                className={"nav-link " + isDisabled}
+                className={"nav-link " + classes.CenterN}
                 to={props.path}
             >
                 {props.name}

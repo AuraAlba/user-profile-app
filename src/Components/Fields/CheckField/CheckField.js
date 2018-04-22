@@ -1,5 +1,6 @@
 import React from "react";
 import Toggle from "react-bootstrap-toggle";
+import classes from "./CheckField.scss";
 
 class CheckField extends React.Component{
     constructor(){
@@ -15,11 +16,11 @@ class CheckField extends React.Component{
 
     render(){
         return(
-            <div className="checkbox form-group row">
-                <label className="col-sm-8 col-form-label" >
+            <div className={"checkbox form-group row "+ classes.CheckFieldS}>
+                <label className={"col-sm-6 col-form-label "+classes.CheckLabel} >
                     {this.props.label}
                 </label>
-                <div  className="col-sm-4">
+                <div  className="col-sm-6">
                     <Toggle
                         onClick={this.onToggle}
                         on={<h6>ON</h6>}
@@ -27,6 +28,9 @@ class CheckField extends React.Component{
                         size="xs"
                         active={this.state.toggleActive}
                         width={80}
+                        offClassName={classes.ToggleOffS}
+                        onClassName={classes.ToggleOnS}
+
                     />
                 </div>
 

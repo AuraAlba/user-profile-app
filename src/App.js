@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Route, Switch, withRouter, Redirect} from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import {Layout} from "./Containers/Layout/Layout";
 import UserProfile from "./Containers/UserProfile/UserProfile";
@@ -18,10 +17,7 @@ class App extends Component {
                         <Route path="/" exact component={Home}/>
                     </Switch>
                 </Layout>
-                {/*<header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React!!</h1>
-        </header>*/}
+
 
             </div>
         );

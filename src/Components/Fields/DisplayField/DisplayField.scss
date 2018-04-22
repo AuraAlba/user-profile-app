@@ -1,0 +1,20 @@
+.DisplayS{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: .8em;
+  color: #ffffff;
+
+  .LabelS{
+    text-align: right;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 575px){
+  .DisplayS{
+    text-align: center;
+
+    .LabelS{
+      text-align: center;
+    }
+  }
+}

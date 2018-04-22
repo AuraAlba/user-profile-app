@@ -1,0 +1,23 @@
+.CheckFieldS{
+  padding: 5px;
+
+  .CheckLabel{
+      text-align: right;
+  }
+
+  .ToggleOffS{
+    background-color: #e4f7ffdb;
+    color: #3d91b7;
+     h6{
+       margin-top: 5px;
+     }
+  }
+
+  .ToggleOnS{
+    background-color: #265bbbbf;
+    color: #ffffff;
+    h6{
+      margin-top: 5px;
+    }
+  }
+}

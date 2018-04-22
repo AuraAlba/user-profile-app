@@ -1,7 +1,6 @@
-import React from "react";
 
 const DateField = (props) =>{
-    const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second:'numeric'};
+    const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}; //, hour: 'numeric', minute: 'numeric', second:'numeric'
     const dateElements = props.date.split("-");
     const yearD = dateElements[0];
     const monthD = dateElements[1];
