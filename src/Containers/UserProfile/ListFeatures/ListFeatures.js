@@ -6,7 +6,7 @@ class ListFeatures extends React.Component{
     render(){
         return(
             <div className={"form-group row " + classes.FeatureS}>
-                <h4>Features</h4>
+                <h4>{this.props.title}</h4>
                 <div className="col-sm-12">
                     {this.props.features.map(function(name, index){
                         return <CheckField label={name} key={index}/>
