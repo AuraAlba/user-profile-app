@@ -6,9 +6,9 @@ class ListFeatures extends React.Component{
         return(
             <div className="form-group row">
                 <h2>Features</h2>
-                <div className="col-sm-10">
+                <div className="col-sm-8">
                     {this.props.features.map(function(name, index){
-                        return <CheckField label={name} id={index}/>
+                        return <CheckField label={name} key={index}/>
                     })}
 
                 </div>

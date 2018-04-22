@@ -16,10 +16,10 @@ class CheckField extends React.Component{
     render(){
         return(
             <div className="checkbox form-group row">
-                <label className="col-sm-2 col-form-label" >
+                <label className="col-sm-8 col-form-label" >
                     {this.props.label}
                 </label>
-                <div  className="col-sm-10">
+                <div  className="col-sm-4">
                     <Toggle
                         onClick={this.onToggle}
                         on={<h6>ON</h6>}
