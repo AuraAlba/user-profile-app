@@ -1,3 +1,5 @@
+@import "../../../scss/variables";
+
 .CheckFieldS{
   padding: 5px;
 
@@ -6,16 +8,16 @@
   }
 
   .ToggleOffS{
-    background-color: #e4f7ffdb;
-    color: #3d91b7;
+    background-color: $blue-off;
+    color: $blue;
      h6{
        margin-top: 5px;
      }
   }
 
   .ToggleOnS{
-    background-color: #265bbbbf;
-    color: #ffffff;
+    background-color: $blu-on;
+    color: $primary-color;
     h6{
       margin-top: 5px;
     }

@@ -1,7 +1,9 @@
+@import "../../../scss/variables";
+
 .DisplayS{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: .8em;
-  color: #ffffff;
+  color: $primary-color;
 
   .LabelS{
     text-align: right;

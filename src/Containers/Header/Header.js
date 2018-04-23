@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import NavItem from './NavItem/NavItem';
 import logo from './../../logo.png';
 import classes from './Header.scss';
+import navItemClasses from './NavItem/NavItem.scss';
 
 class Header extends Component {
     state = {
@@ -18,7 +19,7 @@ class Header extends Component {
         const collapseClass = this.state.isOpen ? 'navbar-collapse' : "collapse navbar-collapse";
 
         return (
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className={"navbar navbar-expand-lg navbar-light bg-light "+ navItemClasses.NavBar +" "+ navItemClasses.NavBarLight }>
                 <a className="navbar-brand" href="/"><img src={logo} className={classes.SizeI} alt="Logo" /></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent"
@@ -27,7 +28,7 @@ class Header extends Component {
                 </button>
 
                 <div className={collapseClass} id="navbarSupportedContent">
-                    <ul className="navbar-nav mr-auto">
+                    <ul className={"navbar-nav mr-auto "+ navItemClasses.NavBarNav }>
                         <NavItem path="/" name="Home"/>
                         <NavItem path="/user-profile" name="User Profile"/>
                         <NavItem path="/contact-us" name="Contact Us" disabled="true"/>

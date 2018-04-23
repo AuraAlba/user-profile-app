@@ -1,21 +1,27 @@
+@import "../../../scss/variables";
 
-.NavItem{
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  transition: .5s ease;
+  .NavBar.NavBarLight .NavBarNav{
+    .NavItem{
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      transition: .5s ease;
 
-  &:hover{
-    background-color:#2daae1 ;
-  }
+      &:hover{
+        background-color:$blue ;
+      }
 
-  .CenterN{
-    text-align: center;
-    color: #2daae1!important;
-    transition: .5s ease;
+      .CenterN{
+        text-align: center;
+        color: $blue;
+        transition: .5s ease;
 
-    &:hover{
-      color: #ffffff!important;
+        &:hover{
+          color: $primary-color;
+        }
+      }
+
     }
   }
 
-}
+
+
 

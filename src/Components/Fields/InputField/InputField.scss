@@ -1,6 +1,8 @@
+@import "../../../scss/variables";
+
 .InputField {
   padding: 10px;
   .Input {
-    background-color: #e4f7ffdb;
+    background-color: $blue-off;
   }
 }

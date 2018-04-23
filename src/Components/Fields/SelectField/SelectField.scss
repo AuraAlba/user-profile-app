@@ -1,8 +1,10 @@
+@import "../../../scss/variables";
+
 .SelectS{
   padding: 10px;
 
   .FieldS{
-    background-color: #e4f7ffdb;
-    color: #3d91b7;
+    background-color: $blue-off;
+    color: $blue;
   }
 }
