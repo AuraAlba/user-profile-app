@@ -64,7 +64,7 @@
     `49a6307e-c261-414d-86f5-c6004bcec8ab`                                                                                                                                                                   
     `1b2f7b83-7b4d-441d-a210-afaa970e5b76` 
     
-   ##App Structure
+   ## App Structure
    ### Components
    Those are the components in the app like form fields and basic components to apply the routing (Home, ContactUs).
    ### Containers
