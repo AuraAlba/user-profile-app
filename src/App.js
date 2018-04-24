@@ -7,6 +7,7 @@ import UserProfile from "./Containers/UserProfile/UserProfile";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import Home from "./Components/Home/Home";
 import messages from "./messages";
+import themeClasses from "./scss/themeStyles.scss";
 
 class App extends Component {
     render() {
@@ -15,7 +16,7 @@ class App extends Component {
                 locale={this.props.lang}
                 messages={messages[this.props.lang]}>
                 <div className="App">
-                    <Layout>
+                    <Layout class={themeClasses.TranquilityTheme}>
                         <Switch>
                             <Route path="/user-profile" exact component={UserProfile}/>
                             <Route path="/contact-us" exact component={ContactUs}/>
