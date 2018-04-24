@@ -1,0 +1,15 @@
+{
+  "name": "mockyeah",
+  "host": "localhost",
+  "port": 8010,
+  "fixturesDir": "./fixtures",
+  "capturesDir": "./mockyeah",
+  "output": true,
+  "journal": false,
+  "verbose": false,
+  "headers": {
+      "user-agent": "curl/7.43.0",
+      "accept": "*/*",
+      "Access-Control-Allow-Origin": "*"
+   }
+}
