@@ -77,7 +77,7 @@ class UserProfile extends Component {
     };
 
     componentDidMount() {
-        const idUser = sessionStorage.getItem("idUser");
+        const idUser = sessionStorage.getItem("idUser") || ' a237ed14-88fb-45f3-b9b1-471877dbdc60';
 
         if (idUser) {
             axios.get('customerData/' + idUser)
@@ -132,6 +132,7 @@ class UserProfile extends Component {
             formIsValid: formIsValid
         });
     };
+
 
     featureChanged(value, key) {
         const updatedFormElement = updateObject(this.state.formData.enabledFeatures, {
@@ -221,7 +222,12 @@ class UserProfile extends Component {
                                     date={this.state.lastPaymentDate}/></DisplayField>
                             </div>
                             <div className={classes.SubSectionB}>
-                                <AutocompleteField label={"Time Zones"}/>
+                                <AutocompleteField
+                                    label={"Time Zones"}
+                                    changed={(event) => this.inputChangeHandler(event, "displayedTimezone")}
+                                    value={this.state.formData.displayedTimezone.value}
+                                />
+
                             </div>
                             <div className={classes.SubSectionB}>
                                 <InputField

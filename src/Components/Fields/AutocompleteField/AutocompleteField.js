@@ -1,51 +1,114 @@
 import React from "react";
-import Autocomplete from 'react-autocomplete';
 import dataTimeZone from './timeZones';
 import classes from './Autocomplete.scss';
+import Autosuggest from 'react-autosuggest';
 
-class AutocompleteField extends React.Component{
-    constructor(props, context) {
-        super(props, context);
+const escapeRegexCharacters = str => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const getSuggestions = value => {
+    const escapedValue = escapeRegexCharacters(value.trim());
+
+    if (escapedValue === '') {
+        return [];
+    }
+
+    const regex = new RegExp('^' + escapedValue, 'i');
+    const suggestions = dataTimeZone.filter(dataTime => regex.test(dataTime.value));
+
+    if (suggestions.length === 0) {
+        return [
+            {isAddNew: true}
+        ];
+    }
+
+    return suggestions;
+}
+
+class AutocompleteField extends React.Component {
+    constructor(props) {
+        super();
+
         this.state = {
-            value: "",
-            autocompleteData: dataTimeZone
+            value: props.value,
+            suggestions: []
         };
-
-        this.renderItem = this.renderItem.bind(this);
     }
 
+    onChange = (event, {newValue, method}) => {
+        this.setState({
+            value: newValue
+        });
+        this.props.changed({
+            "target": {
+                "value": newValue
+            }
+        });
+        console.log(newValue);
+    };
 
-    renderItem(item, highlighted){
-        return (
-            <div
-                key={item.id}
-                style={{ backgroundColor: highlighted ? '#e4f7ffdb' : '#3d91b7',
-                        color: highlighted ? '#3d91b7' : 'white'}}
-            >
-                {item.label}
-            </div>
-        );
-    }
+    getSuggestionValue = suggestion => {
+        if (suggestion.isAddNew) {
+            return this.state.value;
+        }
+
+        return suggestion.value;
+    };
+
+    renderSuggestion = suggestion => {
+        if (suggestion.isAddNew) {
+            return (
+                <span>
+          [+] Add new: <strong>{this.state.value}</strong>
+        </span>
+            );
+        }
+
+        return suggestion.value;
+    };
+
+    onSuggestionsFetchRequested = ({value}) => {
+        this.setState({
+            suggestions: getSuggestions(value)
+        });
+    };
+
+    onSuggestionsClearRequested = () => {
+        this.setState({
+            suggestions: []
+        });
+    };
+
+    onSuggestionSelected = (event, {suggestion}) => {
+        if (suggestion.isAddNew) {
+            console.log('Add new:', this.state.value);
+        }
+    };
 
     render() {
+        const {value, suggestions} = this.state;
+        const inputProps = {
+            placeholder: "Select time zone",
+            value,
+            onChange: this.onChange
+        };
+
         return (
-            <div className={"form-group row "+ classes.AutoCompleteS}>
+            <div className={classes.AutoCompleteS + " form-group row"}>
                 <label className="col-sm-3 col-form-label">{this.props.label}</label>
-                <div className={"col-sm-9"}>
-                <Autocomplete
-                    getItemValue={(item) => item.label}
-                    items={this.state.autocompleteData}
-                    shouldItemRender={(item, value) => item.label.toLowerCase().indexOf(value.toLowerCase()) > -1}
-                    renderItem={this.renderItem}
-                    value={this.state.value}
-                    onChange={e => this.setState({ value: e.target.value })}
-                    onSelect={value => this.setState({ value })}
-                />
+                <div className="col-sm-9">
+                    <Autosuggest
+                        suggestions={suggestions}
+                        onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
+                        onSuggestionsClearRequested={this.onSuggestionsClearRequested}
+                        getSuggestionValue={this.getSuggestionValue}
+                        renderSuggestion={this.renderSuggestion}
+                        onSuggestionSelected={this.onSuggestionSelected}
+                        inputProps={inputProps}
+                    />
                 </div>
             </div>
         );
     }
-
 }
 
 export default AutocompleteField;

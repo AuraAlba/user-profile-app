@@ -2,11 +2,11 @@
 
 .ImageProfile{
   padding: 15px;
+  width: 50%;
+  margin: 0 auto;
 
   .ResponsiveImg{
     width: 50%;
-    max-width: 150px;
-    height: auto;
     border-radius: 50%;
     display: block;
     margin-left: auto;
