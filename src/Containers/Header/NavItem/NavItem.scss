@@ -1,22 +1,15 @@
 @import "../../../scss/variables";
 
   .NavBar.NavBarLight .NavBarNav{
+
     .NavItem{
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       transition: .5s ease;
 
-      &:hover{
-        background-color:$blue ;
-      }
-
       .CenterN{
         text-align: center;
-        color: $blue;
         transition: .5s ease;
 
-        &:hover{
-          color: $primary-color;
-        }
       }
 
     }

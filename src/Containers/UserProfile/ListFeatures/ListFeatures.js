@@ -26,7 +26,7 @@ class ListFeatures extends React.Component{
         console.log(this.state);
     }
 
-    onToggleHandler(value, key){ debugger;
+    onToggleHandler(value, key){
         let valuesToReplace = [...this.state.listFeatures];
         valuesToReplace[key].value = value;
 
