@@ -8,13 +8,13 @@ import classes from "./MessageField.scss";
 
 
 class MessageField extends React.Component{
-    constructor () {
+    constructor (props) {
         super();
 
         this.handleModelChange = this.handleModelChange.bind(this);
 
         this.state = {
-            model: 'Example text'
+            model: props.message
         };
     }
 
@@ -22,7 +22,13 @@ class MessageField extends React.Component{
         this.setState({
             model: model
         });
-    }
+        console.log(model);
+        this.props.changed({
+            "target": {
+                "value": model
+            }
+        });
+    };
 
     render () {
         return (

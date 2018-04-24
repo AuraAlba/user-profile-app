@@ -12,7 +12,7 @@ class CheckField extends React.Component{
     onToggle() {
         const newToggleValue = !this.state.toggleActive;
         this.setState({ toggleActive: newToggleValue });
-        this.props.clicked(newToggleValue, this.props.index);
+        this.props.clicked(newToggleValue, this.props.index, this.props.keyFeature);
     }
 
 

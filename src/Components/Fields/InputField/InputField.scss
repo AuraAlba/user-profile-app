@@ -2,5 +2,11 @@
 
 .InputField {
   padding: 10px;
+  .Input {
+    background-color: $blue-off;
+  }
 
+  .Invalid {
+    border: 1px solid red;
+  }
 }

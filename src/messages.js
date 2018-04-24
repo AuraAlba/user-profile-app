@@ -1,6 +1,9 @@
 export default {
     "en": {
+        "informationNotAvailable": "Information not available",
+        "succesMessage": "Information saved successfully",
         "userProfile": "User Profile",
+        "sendButton": "Send",
         "informationAccount": "Information Account",
         "subscriptionType": "Subscription Type",
         "creationDate": "Creation Date",
@@ -17,7 +20,10 @@ export default {
         "ENABLE_EDXNOTES": "Enable exxnotes",
     },
     "es": {
+        "informationNotAvailable": "Información no disponible",
+        "succesMessage": "Información guardad exitosamente",
         "userProfile": "Perfil de Usuario",
+        "sendButton": "Enviar",
         "informationAccount": "Información de la Cuenta",
         "subscriptionType": "Tipo de Suscripción",
         "creationDate": "Fecha de creación",

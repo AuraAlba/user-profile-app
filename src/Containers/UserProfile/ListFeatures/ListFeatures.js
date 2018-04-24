@@ -26,9 +26,10 @@ class ListFeatures extends React.Component{
         console.log(this.state);
     }
 
-    onToggleHandler(value, key){
+    onToggleHandler(value, index, key){
         let valuesToReplace = [...this.state.listFeatures];
-        valuesToReplace[key].value = value;
+
+        valuesToReplace[index].value = value;
 
         if (this.getNumerFeautersEnabled() >= this.props.maxNumberFeatures) {
             valuesToReplace = valuesToReplace.map((feature) => {
@@ -50,6 +51,8 @@ class ListFeatures extends React.Component{
             "listFeatures": valuesToReplace,
             "numFeaturesEnabled": this.getNumerFeautersEnabled()
         });
+
+        this.props.changed(value, key);
     }
 
     render(){
@@ -60,10 +63,10 @@ class ListFeatures extends React.Component{
                     {this.state.listFeatures.map((name, index) => {
                         return <CheckField
                             label={name.label}
-                            key={index}
+                            keyFeature={name.keyFeature}
                             index={index}
                             active={name.value}
-                            clicked={(value, key) => this.onToggleHandler(value, key)}
+                            clicked={(value, index, keyFeature) => this.onToggleHandler(value, index, keyFeature)}
                             disabled={name.disabled}
                         />
                     })}
