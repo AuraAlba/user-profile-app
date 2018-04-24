@@ -1,63 +1,63 @@
 @import "variables";
 @import "../Containers/Header/NavItem/NavItem";
 
-.TranquilityTheme{
-  .NavBar .NavBarNav{
-    .NavItem{
-      &:hover{
-        background-color:$blue ;
+.TranquilityTheme {
+  .NavBar .NavBarNav {
+    .NavItem {
+      &:hover {
+        background-color: $blue;
       }
 
-      .CenterN{
+      .CenterN {
         color: $blue;
 
-        &:hover{
+        &:hover {
           color: $primary-color;
         }
       }
     }
   }
 
-  .container{
-    h3{
+  .container {
+    h3 {
       color: $blue;
     }
 
-    .SectionB{
+    .SectionB {
       background-color: $blue-light;
       color: $primary-color;
 
-      .ResponsiveImg{
-        border: 1px solid  $blue ;
+      .ResponsiveImg {
+        border: 1px solid $blue;
       }
 
-      .SubSectionB{
+      .SubSectionB {
         background-color: $blue;
 
-        .DisplayS{
+        .DisplayS {
           color: $primary-color;
         }
 
         .InputField .Input {
           background-color: $blue-off;
 
-          &::placeholder{
+          &::placeholder {
             color: $blue;
           }
         }
 
-        .SelectS .FieldS{
+        .SelectS .FieldS {
           background-color: $blue-off;
           color: $blue;
         }
 
-        .CheckFieldS{
-          .ToggleOffS{
+        .CheckFieldS {
+          .ToggleOffS {
             background-color: $blue-off;
             color: $blue;
           }
 
-          .ToggleOnS{
+          .ToggleOnS {
             background-color: $blu-on;
             color: $primary-color;
           }
@@ -68,63 +68,63 @@
 
 }
 
-.SafariTheme{
-  .NavBar .NavBarNav{
-    .NavItem{
-      &:hover{
-        background-color:$yellow ;
+.SafariTheme {
+  .NavBar .NavBarNav {
+    .NavItem {
+      &:hover {
+        background-color: $yellow;
       }
 
-      .CenterN{
+      .CenterN {
         color: $brown;
 
-        &:hover{
+        &:hover {
           color: $brown;
         }
       }
     }
   }
 
-  .container{
-    h3{
+  .container {
+    h3 {
       color: $brown;
     }
 
-    .SectionB{
+    .SectionB {
       background-color: $yellow-light;
       color: $primary-color;
 
-      .ResponsiveImg{
-        border: 1px solid  $brown ;
+      .ResponsiveImg {
+        border: 1px solid $brown;
       }
 
-      .SubSectionB{
+      .SubSectionB {
         background-color: $brown;
 
-        .DisplayS{
+        .DisplayS {
           color: $primary-color;
         }
 
         .InputField .Input {
           background-color: $yellow-light;
 
-          &::placeholder{
+          &::placeholder {
             color: $brown;
           }
         }
 
-        .SelectS .FieldS{
+        .SelectS .FieldS {
           background-color: $yellow-light;
           color: $brown;
         }
 
-        .CheckFieldS{
-          .ToggleOffS{
+        .CheckFieldS {
+          .ToggleOffS {
             background-color: $yellow-light;
             color: $brown;
           }
 
-          .ToggleOnS{
+          .ToggleOnS {
             background-color: $brown-on;
             color: $primary-color;
             border-color: $brown-on;
@@ -136,63 +136,63 @@
 
 }
 
-.GardenTheme{
-  .NavBar .NavBarNav{
-    .NavItem{
-      &:hover{
-        background-color: $green ;
+.GardenTheme {
+  .NavBar .NavBarNav {
+    .NavItem {
+      &:hover {
+        background-color: $green;
       }
 
-      .CenterN{
+      .CenterN {
         color: $green;
 
-        &:hover{
+        &:hover {
           color: $primary-color;
         }
       }
     }
   }
 
-  .container{
-    h3{
+  .container {
+    h3 {
       color: $green;
     }
 
-    .SectionB{
+    .SectionB {
       background-color: $green-light;
       color: $primary-color;
 
-      .ResponsiveImg{
-        border: 1px solid  $green ;
+      .ResponsiveImg {
+        border: 1px solid $green;
       }
 
-      .SubSectionB{
+      .SubSectionB {
         background-color: $green;
 
-        .DisplayS{
+        .DisplayS {
           color: $primary-color;
         }
 
         .InputField .Input {
           background-color: $green-off;
 
-          &::placeholder{
+          &::placeholder {
             color: $green-dark;
           }
         }
 
-        .SelectS .FieldS{
+        .SelectS .FieldS {
           background-color: $green-off;
           color: $green-dark;
         }
 
-        .CheckFieldS{
-          .ToggleOffS{
+        .CheckFieldS {
+          .ToggleOffS {
             background-color: $green-off;
             color: $green-dark;
           }
 
-          .ToggleOnS{
+          .ToggleOnS {
             background-color: $green-dark;
             color: $primary-color;
             border-color: $green-dark;
@@ -204,63 +204,63 @@
 
 }
 
-.FabulousTheme{
-  .NavBar .NavBarNav{
-    .NavItem{
-      &:hover{
-        background-color:  $violet;
+.SmplyTheme {
+  .NavBar .NavBarNav {
+    .NavItem {
+      &:hover {
+        background-color: $violet;
       }
 
-      .CenterN{
+      .CenterN {
         color: $violet;
 
-        &:hover{
+        &:hover {
           color: $primary-color;
         }
       }
     }
   }
 
-  .container{
-    h3{
+  .container {
+    h3 {
       color: $violet;
     }
 
-    .SectionB{
+    .SectionB {
       background-color: $violet-light;
       color: $primary-color;
 
-      .ResponsiveImg{
-        border: 1px solid  $violet ;
+      .ResponsiveImg {
+        border: 1px solid $violet;
       }
 
-      .SubSectionB{
+      .SubSectionB {
         background-color: $violet;
 
-        .DisplayS{
+        .DisplayS {
           color: $primary-color;
         }
 
         .InputField .Input {
           background-color: $violet-light;
 
-          &::placeholder{
+          &::placeholder {
             color: $violet-dark;
           }
         }
 
-        .SelectS .FieldS{
+        .SelectS .FieldS {
           background-color: $violet-light;
           color: $violet-dark;
         }
 
-        .CheckFieldS{
-          .ToggleOffS{
+        .CheckFieldS {
+          .ToggleOffS {
             background-color: $violet-light;
             color: $violet-dark;
           }
 
-          .ToggleOnS{
+          .ToggleOnS {
             background-color: $violet-dark;
             color: $primary-color;
             border-color: $violet-dark;
@@ -272,63 +272,63 @@
 
 }
 
-.TropicalTheme{
-  .NavBar .NavBarNav{
-    .NavItem{
-      &:hover{
+.TropicalTheme {
+  .NavBar .NavBarNav {
+    .NavItem {
+      &:hover {
         background-color: $orange;
       }
 
-      .CenterN{
+      .CenterN {
         color: $orange;
 
-        &:hover{
+        &:hover {
           color: $primary-color;
         }
       }
     }
   }
 
-  .container{
-    h3{
+  .container {
+    h3 {
       color: $orange;
     }
 
-    .SectionB{
+    .SectionB {
       background-color: $orange-light;
       color: $primary-color;
 
-      .ResponsiveImg{
-        border: 1px solid  $orange ;
+      .ResponsiveImg {
+        border: 1px solid $orange;
       }
 
-      .SubSectionB{
+      .SubSectionB {
         background-color: $orange;
 
-        .DisplayS{
+        .DisplayS {
           color: $primary-color;
         }
 
         .InputField .Input {
           background-color: $orange-light;
 
-          &::placeholder{
+          &::placeholder {
             color: $orange-dark;
           }
         }
 
-        .SelectS .FieldS{
+        .SelectS .FieldS {
           background-color: $orange-light;
           color: $orange-dark;
         }
 
-        .CheckFieldS{
-          .ToggleOffS{
+        .CheckFieldS {
+          .ToggleOffS {
             background-color: $orange-light;
             color: $orange-dark;
           }
 
-          .ToggleOnS{
+          .ToggleOnS {
             background-color: $orange-dark;
             color: $primary-color;
             border-color: $orange-dark;
@@ -340,63 +340,63 @@
 
 }
 
-.CandyTheme{
-  .NavBar .NavBarNav{
-    .NavItem{
-      &:hover{
+.CandyTheme {
+  .NavBar .NavBarNav {
+    .NavItem {
+      &:hover {
         background-color: $red;
       }
 
-      .CenterN{
+      .CenterN {
         color: $red;
 
-        &:hover{
+        &:hover {
           color: $primary-color;
         }
       }
     }
   }
 
-  .container{
-    h3{
+  .container {
+    h3 {
       color: $red;
     }
 
-    .SectionB{
+    .SectionB {
       background-color: $red-light;
       color: $primary-color;
 
-      .ResponsiveImg{
-        border: 1px solid  $red ;
+      .ResponsiveImg {
+        border: 1px solid $red;
       }
 
-      .SubSectionB{
+      .SubSectionB {
         background-color: $red;
 
-        .DisplayS{
+        .DisplayS {
           color: $primary-color;
         }
 
         .InputField .Input {
           background-color: $red-light;
 
-          &::placeholder{
+          &::placeholder {
             color: $red-dark;
           }
         }
 
-        .SelectS .FieldS{
+        .SelectS .FieldS {
           background-color: $red-light;
           color: $red-dark;
         }
 
-        .CheckFieldS{
-          .ToggleOffS{
+        .CheckFieldS {
+          .ToggleOffS {
             background-color: $red-light;
             color: $red-dark;
           }
 
-          .ToggleOnS{
+          .ToggleOnS {
             background-color: $red-dark;
             color: $primary-color;
             border-color: $red-dark;
@@ -408,63 +408,63 @@
 
 }
 
-.MustacheTheme{
-  .NavBar .NavBarNav{
-    .NavItem{
-      &:hover{
+.MustacheTheme {
+  .NavBar .NavBarNav {
+    .NavItem {
+      &:hover {
         background-color: $aquamarine;
       }
 
-      .CenterN{
+      .CenterN {
         color: $aquamarine;
 
-        &:hover{
+        &:hover {
           color: $primary-color;
         }
       }
     }
   }
 
-  .container{
-    h3{
+  .container {
+    h3 {
       color: $aquamarine;
     }
 
-    .SectionB{
+    .SectionB {
       background-color: $aquamarine-light;
       color: $primary-color;
 
-      .ResponsiveImg{
-        border: 1px solid  $aquamarine ;
+      .ResponsiveImg {
+        border: 1px solid $aquamarine;
       }
 
-      .SubSectionB{
+      .SubSectionB {
         background-color: $aquamarine;
 
-        .DisplayS{
+        .DisplayS {
           color: $primary-color;
         }
 
         .InputField .Input {
           background-color: $aquamarine-light;
 
-          &::placeholder{
+          &::placeholder {
             color: $aquamarine-dark;
           }
         }
 
-        .SelectS .FieldS{
+        .SelectS .FieldS {
           background-color: $aquamarine-light;
           color: $aquamarine-dark;
         }
 
-        .CheckFieldS{
-          .ToggleOffS{
+        .CheckFieldS {
+          .ToggleOffS {
             background-color: $aquamarine-light;
             color: $aquamarine;
           }
 
-          .ToggleOnS{
+          .ToggleOnS {
             background-color: $aquamarine-dark;
             color: $primary-color;
             border-color: $aquamarine-dark;

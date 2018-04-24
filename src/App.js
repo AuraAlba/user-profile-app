@@ -10,15 +10,30 @@ import messages from "./messages";
 import themeClasses from "./scss/themeStyles.scss";
 
 class App extends Component {
+    state = {
+        "lang": "en",
+        "theme": "TranquilityTheme"
+    };
+
+    onDataSaved(userData) {
+        const theme = userData.themeName.value.split(" ")[0] + "Theme";
+
+        this.setState({
+           "lang": userData.languageCode.value,
+            "theme": theme
+        });
+        console.log(userData);
+    }
+
     render() {
         return (
             <IntlProvider
-                locale={this.props.lang}
-                messages={messages[this.props.lang]}>
+                locale={this.state.lang}
+                messages={messages[this.state.lang]}>
                 <div className="App">
-                    <Layout class={themeClasses.TranquilityTheme}>
+                    <Layout class={this.state.theme}>
                         <Switch>
-                            <Route path="/user-profile" exact component={UserProfile}/>
+                            <Route path="/user-profile" exact render={() => <UserProfile dataSaved={(userData) => this.onDataSaved(userData)}/>}/>
                             <Route path="/contact-us" exact component={ContactUs}/>
                             <Route path="/" exact component={Home}/>
                         </Switch>

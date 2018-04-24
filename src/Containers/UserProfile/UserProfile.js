@@ -107,7 +107,7 @@ class UserProfile extends Component {
                         "formData": formData,
                         "userId": idUser
                     });
-                    console.log(res);
+                    this.props.dataSaved(formData);
                 });
         }
     }
@@ -178,6 +178,7 @@ class UserProfile extends Component {
                     "dataSent": true
                 });
                 window.scrollTo(0, 0);
+                this.props.dataSaved({...this.state.formData});
             });
         console.log(this.state);
     }
